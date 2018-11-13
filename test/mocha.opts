@@ -1,0 +1,5 @@
+--watch
+--require ts-node/register
+--require babel-core/register
+--reporter dot
+--ui bdd
