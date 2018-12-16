@@ -1,5 +1,10 @@
 import { EventSchema, Result, Action } from './interfaces'
 
+const defaults: EventSchema = {
+  productId: 'adamgibbons/ics',
+  title: 'Untitled event'
+}
+
 function validates(config: EventSchema): Result {
   // TODO return true - or - false, reason
   const { productId } = config
@@ -12,8 +17,6 @@ function validates(config: EventSchema): Result {
 }
 
 const validate: Action = (config: EventSchema): Result => {
-  const defaults = { productId: 'adamgibbons', title: 'Untitled event' }
-
   const { error, value } = validates(config)
 
   if (error) return { error }

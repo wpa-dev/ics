@@ -1,7 +1,16 @@
 import { EventSchema, Result, Action } from './interfaces'
 
 function formatValue(value: EventSchema): string {
-  return 'foo'
+  const { productId, title } = value
+
+  let result = 'BEGIN:VEVENT\r\n'
+  result += 'VERSION:2.0\r\n'
+  result += 'CALSCALE:GREGORIAN'
+  result += `PRODID:${productId}\r\n`
+  result += 'END:VEVENT\r\n'
+  result += 'END:VCALENDAR\r\n'
+
+  return result
 }
 
 function format (result: Result): Result {
