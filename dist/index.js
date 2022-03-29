@@ -7,12 +7,12 @@ exports.convertTimestampToArray = convertTimestampToArray;
 exports.createEvent = createEvent;
 exports.createEvents = createEvents;
 
-var _nanoid = require("nanoid");
+var _uuid = require("@cfworker/uuid");
 
 var _pipeline = require("./pipeline");
 
 function assignUniqueId(event) {
-  event.uid = event.uid || (0, _nanoid.nanoid)();
+  event.uid = event.uid || (0, _uuid.uuid)();
   return event;
 }
 

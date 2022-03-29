@@ -1,11 +1,11 @@
-import { nanoid } from 'nanoid'
+import { uuid } from '@cfworker/uuid';
 import { formatDate } from './utils'
 
 const defaults = {
   title: 'Untitled event',
   productId: 'adamgibbons/ics',
   method: 'PUBLISH',
-  uid: nanoid(),
+  uid: uuid(),
   timestamp: formatDate(null, 'utc'),
   start: formatDate(null, 'utc')
 }

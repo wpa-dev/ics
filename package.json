@@ -42,7 +42,7 @@
     "yargs-parser": ">=13.1.2"
   },
   "dependencies": {
-    "nanoid": "^3.1.23",
+    "@cfworker/uuid": "^1.12.2",
     "yup": "^0.32.9"
   },
   "files": [

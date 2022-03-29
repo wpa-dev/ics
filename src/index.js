@@ -1,4 +1,4 @@
-import { nanoid }  from 'nanoid'
+import { uuid } from '@cfworker/uuid';
 import {
   buildEvent,
   validateEvent,
@@ -6,7 +6,7 @@ import {
 } from './pipeline'
 
 function assignUniqueId(event) {
-  event.uid = event.uid || nanoid()
+  event.uid = event.uid || uuid()
   return event
 }
 function validateAndBuildEvent(event) {
